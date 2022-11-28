@@ -57,4 +57,11 @@ public class Card {
                 System.out.println("not found");
             }
 
+        }
+
+        public String toString(){
+            return String.format("%s of %s",value,suit); // a method to print the value of suit in main class
+
+        }
+
     }
