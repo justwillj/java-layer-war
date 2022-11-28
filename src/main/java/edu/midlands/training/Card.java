@@ -10,4 +10,22 @@ public class Card {
             setValue(value);
         }
 
+    public String getSuit() {
+        return suit;
+
+        public void setSuit(String suit) {
+            // valid suits are ["Hearts", "Spades", "Clubs" , "Diamonds"]
+            ArrayList<String> suits = new ArrayList<String>();
+            suits.add("Hearts");
+            suits.add("Spades");
+            suits.add("Clubs");
+            suits.add("Diamonds");
+            if (suits.contains(suit)) {
+                this.suit = suit;
+            }
+            else{
+                System.out.println("not a valid suit");
+            }
+        }
+
     }
