@@ -9,5 +9,8 @@
         <module name="Java-Layer-War" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="java-layer-war" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>
