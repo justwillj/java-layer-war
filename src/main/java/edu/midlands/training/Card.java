@@ -28,4 +28,33 @@ public class Card {
             }
         }
 
+        public String getValue() {
+            return value;
+        }
+
+        public void setValue(String value) {
+            // valid values are ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
+            ArrayList<String> values = new ArrayList<String>();
+            values.add("A");
+            values.add("2");
+            values.add("3");
+            values.add("4");
+            values.add("5");
+            values.add("6");
+            values.add("7");
+            values.add("8");
+            values.add("9");
+            values.add("10");
+            values.add("J");
+            values.add("Q");
+            values.add("K");
+
+
+            if (values.contains(value)) {
+                this.value = value;
+            }
+            else {
+                System.out.println("not found");
+            }
+
     }
