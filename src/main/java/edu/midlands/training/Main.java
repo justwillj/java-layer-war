@@ -18,6 +18,19 @@ public class Main {
         //Shuffles the deck of cards before we spilt it in half
         Collections.shuffle(deckOfCards);
 
+        ArrayList<Card>player_1 = new ArrayList<Card>();
+        ArrayList<Card>player_2 = new ArrayList<Card>();
+        player_1.addAll(deckOfCards.subList(0,26));
+        player_2.addAll(deckOfCards.subList(26,deckOfCards.size()));
+        System.out.println(player_1.size());
+        System.out.println(player_2.size());
+
+        
+
+
+
+
+
 
     }
 

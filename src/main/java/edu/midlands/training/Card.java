@@ -6,7 +6,10 @@ public class Card {
     private String rank;
     private int value;
 
+
     public Card(){
+
+
 
     }
     public Card(String suit, String rank){

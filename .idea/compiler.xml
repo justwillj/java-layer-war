@@ -6,11 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
 
         <module name="java-layer-war" />
 =======
         <module name="Java-Layer-War" />
 >>>>>>> 8a9d341a1887c46a647271d6d38dd2543cd4a583
+=======
+        <module name="Java-Layer-War" />
+>>>>>>> satya_2
       </profile>
     </annotationProcessing>
   </component>
