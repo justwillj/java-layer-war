@@ -25,7 +25,26 @@ public class Main {
         System.out.println(player_1.size());
         System.out.println(player_2.size());
 
-        
+        for(int i=0;i<player_1.size();i++){
+            for(int j=0;j<player_2.size();j++){
+
+                Card p1 = player_1.remove(i);
+                Card p2 = player_2.remove(j);
+                System.out.println(p1);
+                System.out.println(p2);
+
+                if(p1.getValue() > p2.getValue()){
+                    System.out.println("Player1 wins!");
+                    player_1.add(p1);
+                    player_2.add(p2);
+                }
+                else{
+                    System.out.println("Player2 wins!");
+                    player_2.add(p1);
+                    player_2.add(p2);
+                }
+            }
+        }
 
 
 
