@@ -2,66 +2,58 @@ package edu.midlands.training;
 import java.util.ArrayList;
 
 public class Card {
+    private String suit;
+    private String rank;
+    private int value;
 
-        public String suit,value; // Creating a card class which takes a suit and a value of the card
-
-        public Card(String suit, String value) { // Generating constructors for this object
-            setSuit(suit);
-            setValue(value);
-        }
-
-    public String getSuit() {
-        return suit;
-
-        public void setSuit(String suit) {
-            // valid suits are ["Hearts", "Spades", "Clubs" , "Diamonds"]
-            ArrayList<String> suits = new ArrayList<String>();
-            suits.add("Hearts");
-            suits.add("Spades");
-            suits.add("Clubs");
-            suits.add("Diamonds");
-            if (suits.contains(suit)) {
-                this.suit = suit;
-            }
-            else{
-                System.out.println("not a valid suit");
-            }
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        public void setValue(String value) {
-            // valid values are ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
-            ArrayList<String> values = new ArrayList<String>();
-            values.add("A");
-            values.add("2");
-            values.add("3");
-            values.add("4");
-            values.add("5");
-            values.add("6");
-            values.add("7");
-            values.add("8");
-            values.add("9");
-            values.add("10");
-            values.add("J");
-            values.add("Q");
-            values.add("K");
-
-
-            if (values.contains(value)) {
-                this.value = value;
-            }
-            else {
-                System.out.println("not found");
-            }
-
-        }
-
-        public String toString(){
-            return String.format("%s of %s",value,suit); // a method to print the value of suit in main class
-
-        }
+    public Card(){
 
     }
+    public Card(String suit, String rank){
+        this.suit = suit;
+        this.rank = rank;
+
+        if (rank.equals("A")){
+            value = 1;
+        } else if (rank.equals("2")) {
+            value = 2;
+        } else if (rank.equals("3")) {
+            value = 3;
+        }else if (rank.equals("4")) {
+            value = 4;
+        }else if (rank.equals("5")) {
+            value = 5;
+        }else if (rank.equals("6")) {
+            value = 6;
+        }else if (rank.equals("7")) {
+            value = 7;
+        }else if (rank.equals("8")) {
+            value = 8;
+        }else if (rank.equals("9")) {
+            value = 9;
+        }else if (rank.equals("10")) {
+            value = 10;
+        }else if (rank.equals("J")) {
+            value = 11;
+        }else if (rank.equals("Q")) {
+            value = 12;
+        }else if (rank.equals("K")) {
+            value = 13;
+        }
+    }
+    //getter method
+    public String getSuit(){
+        return suit;
+    }
+    public String getRank(){
+        return rank;
+    }
+
+    public int getValue(){
+        return value;
+    }
+
+    public String toString(){
+        return rank + " of " + suit;
+    }
+}
