@@ -1,6 +1,6 @@
 package edu.midlands.training;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,7 +15,9 @@ public class Main {
                 deckOfCards.add( new Card(suitNew[i],ranks[j]));
             }
         }
-        System.out.println(deckOfCards.size());
+        //Shuffles the deck of cards before we spilt it in half
+        Collections.shuffle(deckOfCards);
+
 
     }
 
