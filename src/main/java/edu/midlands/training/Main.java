@@ -7,6 +7,7 @@ public class Main {
         //Link to a resources that we found helpful
         //https://books.trinket.io/thinkjava/chapter12.html
         ArrayList<Card> deckOfCards = new ArrayList<>();
+        ArrayList<Card>matching = new ArrayList<Card>();
         String[] Suits = {"Hearts", "Spades", "Clubs", "Diamonds"};
         String[] ranks = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
 
