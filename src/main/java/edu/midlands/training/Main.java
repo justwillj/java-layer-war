@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+
         //Link to a resources that we found helpful
         //https://books.trinket.io/thinkjava/chapter12.html
         ArrayList<Card> deckOfCards = new ArrayList<>();
@@ -23,8 +24,8 @@ public class Main {
         ArrayList<Card> deckTwo = new ArrayList<Card>();
         deckOne.addAll(deckOfCards.subList(0, 26));
         deckTwo.addAll(deckOfCards.subList(26, deckOfCards.size()));
-        System.out.println(deckOne.size());
-        System.out.println(deckTwo.size());
+//        System.out.println(deckOne.size());
+//        System.out.println(deckTwo.size());
 
 
         while (true) {
@@ -38,16 +39,22 @@ public class Main {
                 deckOne.add(p2);
                 deckOne.add(p1);
                 System.out.println("Player1 wins!");
-                System.out.println("player 1 deck size " + deckOne.size());
-                System.out.println("player 2 deck size " + deckTwo.size());
+//                System.out.println("player 1 deck size " + deckOne.size());
+//                System.out.println("player 2 deck size " + deckTwo.size());
             } else if (p1.getValue() < p2.getValue()) {
                 deckTwo.add(p1);
                 deckTwo.add(p2);
                 System.out.println("Player2 wins!");
-                System.out.println("player 1 deck size " + deckOne.size());
-                System.out.println("player 2 deck size " + deckTwo.size());
+//                System.out.println("player 1 deck size " + deckOne.size());
+//                System.out.println("player 2 deck size " + deckTwo.size());
             } else if (p1.getValue() == p2.getValue()) {
-                if (deckOne.size()>=4 &&deckTwo.size()>=4) {
+                if (deckOne.size()<4) {
+                    System.out.println("Player 1 out of cards. Player two wins.");
+                    break;
+                } else if (deckTwo.size()<4) {
+                    System.out.println("Player 2 out of cards Player one wins.");
+                    break;
+                }
                     Card p1card1 = deckOne.remove(0);
                     Card p1card2 = deckOne.remove(0);
                     Card p1card3 = deckOne.remove(0);
@@ -107,17 +114,17 @@ public class Main {
 //                System.out.println("player 2 deck size " + deckTwo.size());
 
                 }
-            }
-            else if(deckOne.size()<4){
-                System.out.println("Player 2 wins the war");
 
-
-//                System.out.println(deckOne.size());
-//                System.out.println(deckTwo.size());
-            }
-            else if(deckTwo.size()<4){
-                System.out.println("Player 1 wins the war");
-            }
+//            else if(deckOne.size()<4){
+//                System.out.println("Player 2 wins the war");
+//
+//
+////                System.out.println(deckOne.size());
+////                System.out.println(deckTwo.size());
+//            }
+//            else if(deckTwo.size()<4){
+//                System.out.println("Player 1 wins the war");
+//            }
 
             if (deckOne.size() == 0) {
                 System.out.println("Player2 Wins the game");
@@ -193,9 +200,9 @@ public class Main {
 //
 //    }
 
-        System.out.println(deckOne.size());
-        System.out.println(deckTwo.size());
-        System.out.println(matching.size());
+//        System.out.println(deckOne.size());
+//        System.out.println(deckTwo.size());
+//        System.out.println(matching.size());
 
     }
 }
