@@ -47,7 +47,7 @@ public class Main {
                 System.out.println("player 1 deck size " + deckOne.size());
                 System.out.println("player 2 deck size " + deckTwo.size());
             } else if (p1.getValue() == p2.getValue()) {
-                if (deckOne.size()>=4 &&deckTwo.size()>=4) {
+                if (deckOne.size() >= 4 && deckTwo.size() >= 4) {
                     Card p1card1 = deckOne.remove(0);
                     Card p1card2 = deckOne.remove(0);
                     Card p1card3 = deckOne.remove(0);
@@ -83,8 +83,7 @@ public class Main {
                         deckTwo.add(p2card2);
                         deckTwo.add(p2card3);
                         deckTwo.add(p2card4);
-                    }
-                    else{
+                    } else {
                         matching.add(p1);
                         matching.add(p2);
                         matching.add(p1card1);
@@ -106,18 +105,17 @@ public class Main {
 //                System.out.println("player 1 deck size " + deckOne.size());
 //                System.out.println("player 2 deck size " + deckTwo.size());
 
-                }
-            }
-            else if(deckOne.size()<4){
+
+            } else if (deckOne.size() < 4) {
                 System.out.println("Player 2 wins the war");
 
 
 //                System.out.println(deckOne.size());
 //                System.out.println(deckTwo.size());
-            }
-            else if(deckTwo.size()<4){
+            } else if (deckTwo.size() < 4) {
                 System.out.println("Player 1 wins the war");
             }
+        }
 
             if (deckOne.size() == 0) {
                 System.out.println("Player2 Wins the game");
