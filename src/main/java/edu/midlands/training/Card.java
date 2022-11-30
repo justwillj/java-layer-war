@@ -63,6 +63,9 @@ public class Card {
     public void setRank(String rank) {
         this.rank = rank;
     }
+    public void setValue(int value){
+        this.value = value;
+    }
     public String toString(){
         return rank + " of " + suit;
     }
