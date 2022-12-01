@@ -6,10 +6,7 @@ public class Card {
     private String rank;
     private int value;
 
-
     public Card(){
-
-
 
     }
     public Card(String suit, String rank){
@@ -44,18 +41,10 @@ public class Card {
             value = 13;
         }
     }
-    //getter method
-    public String getSuit(){
-        return suit;
-    }
-    public String getRank(){
-        return rank;
-    }
 
     public int getValue(){
         return value;
     }
-
 
     public String toString(){
         return rank + " of " + suit;
