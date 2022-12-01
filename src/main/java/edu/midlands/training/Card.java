@@ -9,8 +9,6 @@ public class Card {
 
     public Card(){
 
-
-
     }
     public Card(String suit, String rank){
         this.suit = suit;
