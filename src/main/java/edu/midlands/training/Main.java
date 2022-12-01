@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        public static void main (String[]args){
+
             ArrayList<Card> deckOfCards = new ArrayList<>();
 
             String[] Suits = {"Hearts", "Spades", "Clubs", "Diamonds"};
@@ -73,4 +73,3 @@ public class Main {
 
         }
     }
-}
