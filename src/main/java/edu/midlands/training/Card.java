@@ -2,6 +2,9 @@ package edu.midlands.training;
 import java.util.*;
 
 public class Card {
+    /*CODE REVIEW:
+       a card has 2 properties, a suit and a value. We can alter the way we display a Card by changing the generated toString() method.
+     */
     private String suit;
     private String rank;
     private int value;
@@ -12,7 +15,9 @@ public class Card {
     public Card(String suit, String rank){
         this.suit = suit;
         this.rank = rank;
-
+    /*CODE REVIEW: you don't want to have if/else statements in a constructor of an object. Instead we want to find a way to make this
+    code work for us elsewhere.
+     */
         if (rank.equals("A")){
             value = 1;
         } else if (rank.equals("2")) {
@@ -49,4 +54,30 @@ public class Card {
     public String toString(){
         return rank + " of " + suit;
     }
+
+    /*CODE REVIEW: this is how I would change the toString() method to work for a Card class with the 2 properties of suit and value
+
+    @Override
+    public String toString() {
+        String card = "";
+        switch (value){
+            case 1:
+                card = "A";
+                break;
+            case 11:
+                card = "J";
+                break;
+            case 12:
+                card = "Q";
+                break;
+            case 13:
+                card = "K";
+                break;
+            default:
+                card = String.valueOf(value);
+        }
+        return card + " of " + suit;
+    }
+
+    */
 }
